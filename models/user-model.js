@@ -1,11 +1,12 @@
-// var mysql = require('mysql');
-// var Schema = mysql.Schema;
+// save records in mongodb
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-// var userSchema = new Schema({
-//     username: String,
-//     googleID: String
-// });
+var userSchema = new Schema({
+    username: String,
+    googleId: String
+});
 
-// var User = mysql.model('user', userSchema);
+var User = mongoose.model('user', userSchema);
 
-// module.exports = User;
+module.exports = User;
